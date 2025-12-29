@@ -6,7 +6,6 @@ def controlKeyboard():
     keyboard = Controller()
     keyboard.type("halo ganteng")
 
-
 controlKeyboard()
 
 
